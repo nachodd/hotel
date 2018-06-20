@@ -15,6 +15,7 @@
         </router-link>
       </template>
     </div>-->
+    <subnavbar />
 
     <div class="text-center">
       <div class="title mb-4">
@@ -33,10 +34,14 @@
 </template>
 
 <script>
+import Subnavbar from '~/components/Subnavbar'
 import { mapGetters } from 'vuex'
 
 export default {
   // layout: 'basic',
+  components: {
+    Subnavbar
+  },
 
   metaInfo () {
     return { title: this.$t('home') }
