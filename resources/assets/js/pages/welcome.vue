@@ -19,7 +19,7 @@
 
     <div class="text-center">
       <div class="title mb-4">
-        {{ title }}
+        <carrousel></carrousel>
       </div>
 
       <!--<div class="links">
@@ -36,13 +36,17 @@
 <script>
 import Subnavbar from '~/components/Subnavbar'
 import { mapGetters } from 'vuex'
+import Carrousel from '~/pages/carrousel'
 
 export default {
   // layout: 'basic',
   components: {
     Subnavbar
   },
+  components: {
+    carrousel: Carrousel,
 
+  },
   metaInfo () {
     return { title: this.$t('home') }
   },
@@ -64,7 +68,5 @@ export default {
   top: 18px;
 }
 
-.title {
-  font-size: 85px;
-}
+
 </style>

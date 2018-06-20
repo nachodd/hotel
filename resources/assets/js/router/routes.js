@@ -17,7 +17,6 @@ export default [
   { path: '/register', name: 'register', component: Register },
   { path: '/password/reset', name: 'password.request', component: PasswordEmail },
   { path: '/password/reset/:token', name: 'password.reset', component: PasswordReset },
-
   { path: '/home', name: 'home', component: Home },
   { path: '/settings',
     component: Settings,
