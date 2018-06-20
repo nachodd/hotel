@@ -16,19 +16,13 @@
       </template>
     </div>-->
     <subnavbar />
-
-    <div class="text-center">
-      <div class="title mb-4">
-        <carrousel></carrousel>
+    <div class="container">
+      <div class="text-center">
+        <div class="title mb-4">
+          <carrousel />
+        </div>
       </div>
 
-      <!--<div class="links">
-        <a href="https://laravel.com/docs">Documentation</a>
-        <a href="https://laracasts.com">Laracasts</a>
-        <a href="https://laravel-news.com">News</a>
-        <a href="https://forge.laravel.com">Forge</a>
-        <a href="https://github.com/laravel/laravel">GitHub</a>
-      </div>-->
     </div>
   </div>
 </template>
@@ -41,11 +35,8 @@ import Carrousel from '~/pages/carrousel'
 export default {
   // layout: 'basic',
   components: {
-    Subnavbar
-  },
-  components: {
-    carrousel: Carrousel,
-
+    Subnavbar,
+    Carrousel,
   },
   metaInfo () {
     return { title: this.$t('home') }
