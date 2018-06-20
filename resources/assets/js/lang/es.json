@@ -32,7 +32,8 @@
   "login_with": "Iniciar Sesión con",
   "register_with": "Registro con",
 
-  "home": {
-    "contrata_msg": "¡Contratá en 3 simples pasos!"
+  "inicio": {
+    "contrata_msg": "¡Contratá en 3 simples pasos!",
+    "elegi_tour": "Seleccioná el tour:"
   }
 }

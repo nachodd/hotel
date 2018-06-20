@@ -4,12 +4,12 @@
     <b-jumbotron fluid style="padding-top: 1.5rem">
       <div class="text-center">
         <div>
-          <h4>{{ $t('home.contrata_msg') }}</h4>
+          <h4>{{ $t('inicio.contrata_msg') }}</h4>
         </div>
         <br>
         <b-container>
           <b-row class="text-center fa-4x">
-            <b-col cols="4">
+            <b-col cols="12" sm="4">
               <div>
                 <b-badge pill variant="primary" class="badge-custom">1</b-badge>
               </div>
@@ -17,7 +17,7 @@
                 rbwrber erbrb e ejrbe rb iuewb riub
               </div>
             </b-col>
-            <b-col cols="4">
+            <b-col cols="12" sm="4">
               <div>
                 <b-badge pill variant="primary" class="badge-custom">2</b-badge>
               </div>
@@ -25,7 +25,7 @@
                 rbwrber erbrb e ejrbe rb iuewb riub
               </div>
             </b-col>
-            <b-col cols="4">
+            <b-col cols="12" sm="4">
               <div>
                 <b-badge pill variant="primary" class="badge-custom">3</b-badge>
               </div>

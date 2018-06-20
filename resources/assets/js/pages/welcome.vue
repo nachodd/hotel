@@ -18,17 +18,21 @@
     <subnavbar />
     <div class="container">
       <div class="text-center">
-        <div class="title mb-4">
+        <div>
+          <h4>{{ $t('inicio.elegi_tour') }}</h4>
+        </div>
+        <div class="title mt-sm-2 mb-4">
           <carrousel />
         </div>
       </div>
-
     </div>
+    <footer-home />
   </div>
 </template>
 
 <script>
 import Subnavbar from '~/components/Subnavbar'
+import FooterHome from '~/components/FooterHome'
 import { mapGetters } from 'vuex'
 import Carrousel from '~/pages/carrousel'
 
@@ -36,6 +40,7 @@ export default {
   // layout: 'basic',
   components: {
     Subnavbar,
+    FooterHome,
     Carrousel,
   },
   metaInfo () {
@@ -58,6 +63,5 @@ export default {
   right: 10px;
   top: 18px;
 }
-
 
 </style>
