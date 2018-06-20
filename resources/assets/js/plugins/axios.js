@@ -53,3 +53,7 @@ axios.interceptors.response.use(response => response, error => {
 
   return Promise.reject(error)
 })
+
+axios.defaults.baseURL = process.env.MIX_APP_URL
+
+window.axios = axios
