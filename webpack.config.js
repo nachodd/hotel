@@ -26,6 +26,6 @@ module.exports = {
     // chunkFilename: 'js/[name].[chunkhash].js',
     chunkFilename: 'dist/js/chunk.[name].js',
     // publicPath: mix.config.hmr ? '//localhost:8080' : '/DEV/hotel'
-    publicPath:  process.env.MIX_PUBLIC_PATH //'/DEV/hotel/public'
+    publicPath: process.env.MIX_PUBLIC_PATH //'/DEV/hotel/public'
   }
 }
