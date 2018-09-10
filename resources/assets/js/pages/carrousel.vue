@@ -120,12 +120,15 @@
         }
     }
     .buy {
-        TEXT-ALIGN: CENTER;
+        text-align: CENTER;
         padding: 0px;
         background-color: darkgreen;
         padding-top: 3px;
         margin-bottom: 0px;
         padding-bottom: 3px;
         font-weight: bolder;
+    }
+    .carousel-3d-slider a:hover {
+      text-decoration: none !important;
     }
 </style>
