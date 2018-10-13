@@ -1,6 +1,6 @@
 <template>
-  <div class="row">
-    <div class="col-lg-8 m-auto">
+  <div class="row margin-top">
+    <div class="col-lg-6 col-sm-12 col-xs-12 m-auto">
       <card :title="$t('login')">
         <form @submit.prevent="login" @keydown="form.onKeydown($event)">
           <!-- Email -->
@@ -36,14 +36,13 @@
           </div>
 
           <div class="form-group row">
-            <div class="col-md-7 offset-md-3 d-flex">
+            <div class="col-md-12 offset-md-3 d-flex">
               <!-- Submit Button -->
               <v-button :loading="form.busy">
                 {{ $t('login') }}
               </v-button>
 
               <!-- GitHub Login Button -->
-              <login-with-github/>
             </div>
           </div>
         </form>
@@ -95,3 +94,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .margin-top {
+    margin-top: 4em;
+  }
+</style>

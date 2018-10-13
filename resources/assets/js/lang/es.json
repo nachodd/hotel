@@ -34,6 +34,12 @@
 
   "inicio": {
     "contrata_msg": "¡Contratá en 3 simples pasos!",
-    "elegi_tour": "Seleccioná el tour:"
+    "elegi_tour": "Seleccioná el tour:",
+    "paso_1": "Seleccioná el tour",
+    "paso_2": "Elegí día y horario",
+    "paso_3": "Comprar ticket y a pasear",
+    "buy": "COMPRAR"
+
   }
+
 }

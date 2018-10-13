@@ -10,7 +10,7 @@
                     quis felis mollis eleifend at vel nunc. Integer pretium nisi nec sapien blandit condimentum. Ut
                     condimentum dictum faucibus.
                     <router-link :to="{path: '/detalle/0'}">
-                        <p class="buy">COMPRAR</p>
+                        <p class="buy">{{ $t('inicio.buy')}}</p>
                     </router-link>
                 </figcaption>
 
@@ -25,7 +25,7 @@
                     quis felis mollis eleifend at vel nunc. Integer pretium nisi nec sapien blandit condimentum. Ut
                     condimentum dictum faucibus.
                     <router-link :to="{path: '/detalle/1'}">
-                        <p class="buy">COMPRAR</p>
+                        <p class="buy">{{ $t('inicio.buy')}}</p>
                     </router-link>
                 </figcaption>
 
@@ -40,7 +40,7 @@
                     quis felis mollis eleifend at vel nunc. Integer pretium nisi nec sapien blandit condimentum. Ut
                     condimentum dictum faucibus.
                     <router-link :to="{path: '/detalle/2'}">
-                        <p class="buy">COMPRAR</p>
+                        <p class="buy">{{ $t('inicio.buy')}}</p>
                     </router-link>
                 </figcaption>
             </figure>
@@ -122,11 +122,11 @@
     .buy {
         text-align: CENTER;
         padding: 0px;
-        background-color: darkgreen;
+        background-color: #3F51B5;
         padding-top: 3px;
         margin-bottom: 0px;
         padding-bottom: 3px;
-        font-weight: bolder;
+        border-radius:1em;
     }
     .carousel-3d-slider a:hover {
       text-decoration: none !important;

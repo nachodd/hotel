@@ -93,6 +93,7 @@
                                  href="#"
                                  :key="option"
                                  :value="option"
+                                 v-bind:class="{ active: hourSelected == option }"
                                  @click="hourSelected = option">
                 {{option}}
               </b-list-group-item>
@@ -105,7 +106,7 @@
           hourSelected }} </b></b-alert>
         <b-row>
           <b-col class="text-center">
-            <b-btn @click="showModal" class="bottom-btn">Comprar</b-btn>
+            <b-btn @click="isModalVisible = true" class="bottom-btn">Comprar</b-btn>
           </b-col>
         </b-row>
       </b-col>
@@ -113,8 +114,7 @@
     <b-row>
       <b-col></b-col>
     </b-row>
-    <buy :showm="isModalVisible"  @close="closeModal"/>
-
+    <buy :show="isModalVisible" @close="isModalVisible = false"/>
   </b-container>
 </template>
 
@@ -139,6 +139,7 @@
     }),
     methods: {
       showModal() {
+        debugger
         this.isModalVisible = true;
       },
       closeModal() {
@@ -153,5 +154,8 @@
     width: 100%;
     bottom: 0;
     right: 0;
+  }
+  .active {
+    background: #4bd !important;
   }
 </style>

@@ -34,11 +34,6 @@ class AddForeign extends Migration
                 $table->foreign('state_id')->references('id')->on('states');
             });
         }
-        if ( Schema::hasTable('states')) {
-            Schema::table('cities', function ($table) {
-                $table->foreign('state_id')->references('id')->on('states');
-            });
-        }
         if ( Schema::hasTable('activities') && Schema::hasTable('activity_images') ) {
             Schema::table('activity_images', function ($table) {
                 $table->foreign('activity_id')->references('id')->on('activities');

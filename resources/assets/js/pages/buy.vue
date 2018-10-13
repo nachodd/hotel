@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-modal id="modalForm" size="lg" title="Finalice su Compra" v-model="showModal">
+    <b-modal id="modalForm" size="lg" title="Finalice su Compra" v-model="showModal"  @hide="hide">
       <b-form @submit="onSubmit" @reset="onReset">
         <b-row>
           <b-col>
@@ -64,30 +64,6 @@
           </b-col>
         </b-row>
         <b-row>
-          <b-col>
-            <b-form-group id="agreInputGroup"
-                          label="Edad:"
-                          label-for="agreInput">
-              <b-form-input id="agreInput2"
-                            type="number"
-                            v-model="form.age"
-                            required
-                            placeholder="Edad:">
-              </b-form-input>
-            </b-form-group>
-          </b-col>
-          <b-col>
-            <b-form-group id="genderInputGroup"
-                          label="Sexo:"
-                          label-for="genderInput">
-              <b-form-select id="genderInput"
-                             :options="genders"
-                             required
-                             v-model="form.gender"
-                             placeholder="Sexo:">
-              </b-form-select>
-            </b-form-group>
-          </b-col>
         </b-row>
         <b-row>
           <b-col>
@@ -102,24 +78,11 @@
               </b-form-input>
             </b-form-group>
           </b-col>
-          <b-col>
-            <b-form-group id="cityInputGroup"
-                          label="Ciudad:"
-                          label-for="cityInput">
-              <b-form-input id="cityInput"
-                            type="text"
-                            v-model="form.cityID"
-                            required
-                            placeholder="Ingrese Ciudad">
-              </b-form-input>
-            </b-form-group>
-          </b-col>
         </b-row>
 
       </b-form>
       <div slot="modal-footer" class="w-100">
-        <b-button block type="submit" variant="warning">Comprar por MercadoPago</b-button>
-        <b-button block type="reset" variant="info">Comprar en Establecimiento</b-button>
+        <b-button block type="submit" variant="info">Comprar por MercadoPago</b-button>
       </div>
     </b-modal>
   </div>
@@ -129,9 +92,7 @@
 <script>
 
   export default {
-    props: {
-      showm: Boolean
-    },
+    props: ['show'],
     data() {
       return {
         form: {
@@ -148,13 +109,12 @@
           {text: 'Seleccione Sexo', value: null},
           'Femenino', 'Masculino'
         ],
-        showModal: this.showm
+        showModal: false
       }
     },
     watch: {
-      showm: function(newVal, oldVal) {
-        console.log(newVal, oldVal);
-        this.showModal = this.showm
+      show: function() {
+        this.showModal = this.show
       }
     },
     methods: {
@@ -172,13 +132,8 @@
         /* Trick to reset/clear native browser form validation state */
         this.showModal = false;
       },
-      show() {
-        this.showModal = true
-      },
       hide() {
-        console.log('hide');
-        this.showModal = false
-        this.showm = false;
+        this.$emit('close')
       }
     }
   }

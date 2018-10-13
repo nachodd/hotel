@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Turn extends Model
+class ActivityImage extends Model
 {
     //
 }

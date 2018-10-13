@@ -5,7 +5,7 @@ const PasswordEmail = () => import('~/pages/auth/password/email').then(m => m.de
 const PasswordReset = () => import('~/pages/auth/password/reset').then(m => m.default || m)
 const NotFound = () => import('~/pages/errors/404').then(m => m.default || m)
 
-const Home = () => import('~/pages/home').then(m => m.default || m)
+const Home = () => import('~/pages/admin/home').then(m => m.default || m)
 const Settings = () => import('~/pages/settings/index').then(m => m.default || m)
 const SettingsProfile = () => import('~/pages/settings/profile').then(m => m.default || m)
 const SettingsPassword = () => import('~/pages/settings/password').then(m => m.default || m)
@@ -15,11 +15,11 @@ export default [
   { path: '/', name: 'welcome', component: Welcome },
   {path: '/detalle/:id', name: 'detalle', component: Detalle },
 
-  { path: '/login', name: 'login', component: Login },
-  { path: '/register', name: 'register', component: Register },
-  { path: '/password/reset', name: 'password.request', component: PasswordEmail },
-  { path: '/password/reset/:token', name: 'password.reset', component: PasswordReset },
-  { path: '/home', name: 'home', component: Home },
+  { path: '/admin/login', name: 'login', component: Login },
+  // { path: '/register', name: 'register', component: Register },
+  // { path: '/password/reset', name: 'password.request', component: PasswordEmail },
+  // { path: '/password/reset/:token', name: 'password.reset', component: PasswordReset },
+  { path: '/admin/home', name: 'home', component: Home },
   { path: '/settings',
     component: Settings,
     children: [

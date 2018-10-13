@@ -14,7 +14,7 @@
                 <b-badge pill variant="primary" class="badge-custom">1</b-badge>
               </div>
               <div class="mt-sm-1">
-                rbwrber erbrb e ejrbe rb iuewb riub
+                {{ $t('inicio.paso_1') }}
               </div>
             </b-col>
             <b-col cols="12" sm="4">
@@ -22,7 +22,7 @@
                 <b-badge pill variant="primary" class="badge-custom">2</b-badge>
               </div>
               <div class="mt-sm-1">
-                rbwrber erbrb e ejrbe rb iuewb riub
+                {{ $t('inicio.paso_2') }}
               </div>
             </b-col>
             <b-col cols="12" sm="4">
@@ -30,7 +30,7 @@
                 <b-badge pill variant="primary" class="badge-custom">3</b-badge>
               </div>
               <div class="mt-sm-1">
-                rbwrber erbrb e ejrbe rb iuewb riub
+                {{ $t('inicio.paso_3') }}
               </div>
             </b-col>
           </b-row>
